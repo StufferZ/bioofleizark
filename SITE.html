@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leizark - Персональный сайт</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /*
+         * Встроенные стили для исправления проблемы с загрузкой
+         */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Эффект "жидкого стекла" */
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            transition: all 0.3s ease;
+        }
+
+        .liquid-glass:hover {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 40px 0 rgba(31, 38, 135, 0.5);
+            transform: translateY(-5px);
+        }
+        
+        /* Стили для карточек ютуберов */
+        .youtuber-card {
+            transition: all 0.3s ease;
+        }
+        .youtuber-card:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Анимированный градиентный фон */
+        .animated-gradient {
+            background: linear-gradient(300deg, #0f0c29, #302b63, #24243e);
+            background-size: 180% 180%;
+            animation: gradient-animation 18s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Кастомный скроллбар */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a4a6a;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6a6a8a;
+        }
+    </style>
+</head>
+<body class="animated-gradient text-white min-h-screen antialiased">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <div class="max-w-5xl mx-auto">
+
+            <!-- Секция Hero -->
+            <header class="text-center py-12">
+                <div class="relative inline-block mb-6">
+                    <img src="https://raw.githubusercontent.com/StufferZ/bioofleizark/refs/heads/main/pfp.png" 
+                         alt="Profile Picture" 
+                         class="rounded-full w-32 h-32 object-cover border-4 border-white/20 shadow-lg">
+                    <span class="absolute bottom-0 right-0 block h-6 w-6 rounded-full bg-teal-400 border-2 border-gray-800"></span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold tracking-tight">leizark</h1>
+                <p class="text-lg md:text-xl text-white/70 mt-4 max-w-2xl mx-auto">
+                    Creative Developer & UI/UX Enthusiast, создающий захватывающие цифровые миры.
+                </p>
+            </header>
+
+            <!-- Основная сетка контента -->
+            <main class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Секция Social Networks -->
+                <section class="liquid-glass rounded-2xl p-6">
+                    <h2 class="text-2xl font-bold mb-4 border-b border-white/10 pb-2">Social Networks</h2>
+                    <div class="space-y-3">
+                        <!-- Discord -->
+                        <div class="flex items-center p-3">
+                            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png" class="w-6 h-6 mr-4" alt="Иконка Discord">
+                            <span>Discord: leizark69</span>
+                        </div>
+                        <!-- Telegram -->
+                        <a href="https://t.me/mt6767" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-lg transition-colors hover:bg-white/10">
+                            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/telegram-white-icon.png" class="w-6 h-6 mr-4" alt="Иконка Telegram">
+                            <span>Telegram: @mt6767</span>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@sigmaleizark" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-lg transition-colors hover:bg-white/10">
+                           <svg class="w-6 h-6 mr-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.25,4,12,4,12,4S5.75,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.75,2,12,2,12s0,4.25,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.75,20,12,20,12,20s6.25,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.25,22,12,22,12S22,7.75,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
+                            <span>YouTube: @sigmaleizark</span>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@iseeyoutimofei" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-lg transition-colors hover:bg-white/10">
+                            <svg class="w-6 h-6 mr-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.43.05-4.84-.95-6.43-2.8-1.59-1.87-2.15-4.24-1.72-6.59.35-1.88 1.31-3.54 2.8-4.61.98-.7 2.15-1.14 3.36-1.25.04-2.17.03-4.33-.01-6.5.08-1.37.51-2.72 1.28-3.88 1.16-1.74 3.12-2.91 5.15-3.07z"/></svg>
+                            <span>TikTok: @iseeyoutimofei</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Секция Geometry Dash -->
+                <section class="lg:col-span-2 liquid-glass rounded-2xl p-6">
+                    <h2 class="text-2xl font-bold mb-4 border-b border-white/10 pb-2">Geometry Dash</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Левая колонка -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-teal-300 mb-3">GD Stats: 
+                                <a href="https://gdbrowser.com/u/insaneh8r" target="_blank" rel="noopener noreferrer" class="font-normal text-white hover:underline">insaneh8r</a>
+                            </h3>
+                            <div class="space-y-2 text-white/80">
+                                <p><span class="font-semibold text-white">Stars:</span> 551 ⭐ | 25 🌙</p>
+                                <p><span class="font-semibold text-white">Coins:</span> 11 (User) 🪙 | 67 (Secret) 🪙</p>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-teal-300 mt-4 mb-3">Classic Demons:</h3>
+                            <ul class="list-disc list-inside text-white/80 space-y-1">
+                                <li><span class="font-medium text-white/90">Easy Demons:</span> 20</li>
+                                <li><span class="font-medium text-white/90">Medium Demons:</span> 3</li>
+                                <li><span class="font-medium text-white/90">Hard Demons:</span> 3</li>
+                                <li><span class="font-medium text-white/90">Insane Demons:</span> 2</li>
+                            </ul>
+                        </div>
+                        <!-- Правая колонка -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-teal-300 mb-3">Hardest:</h3>
+                            <div class="space-y-3">
+                                <a href="https://youtu.be/5_n7hs4prUg?si=q71Dn8Wm3vfF5iwh" target="_blank" rel="noopener noreferrer" class="block p-4 rounded-lg transition-colors hover:bg-white/10 border border-white/10">
+                                    <p class="font-bold">Windy Landscape</p>
+                                    <p class="text-sm text-white/60">by WOOGI1411</p>
+                                </a>
+                                <a href="https://youtu.be/1439Y6WkRts?si=ZWr55S9wuTc1xLo4" target="_blank" rel="noopener noreferrer" class="block p-4 rounded-lg transition-colors hover:bg-white/10 border border-white/10">
+                                    <p class="font-bold">Necropolis</p>
+                                    <p class="text-sm text-white/60">by Neptune</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Секция Favourite Youtubers -->
+                <section class="lg:col-span-3 liquid-glass rounded-2xl p-6">
+                    <h2 class="text-2xl font-bold mb-4 border-b border-white/10 pb-2">Favourite Youtubers</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <!-- Zack Main -->
+                        <a href="https://www.youtube.com/@ZackMain" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg youtuber-card">
+                            <img src="https://yt3.googleusercontent.com/JpHsYhlcNRk2i8JGDNv3WtDFcsd1J2p3pOqWN7028RhBKmkTXCXEJIxBdN1knc0qTSNa1RPM=s160-c-k-c0x00ffffff-no-rj" alt="Аватар Zack Main" class="w-24 h-24 rounded-full mx-auto mb-2 border-2 border-white/20 object-cover">
+                            <span class="font-semibold">Zack Main</span>
+                        </a>
+                        <!-- TheBrianMaps -->
+                        <a href="https://www.youtube.com/@TheBrianMaps" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg youtuber-card">
+                            <img src="https://yt3.googleusercontent.com/ESSIcskWJsT46dW_D2t8aR3ZX_Eiay9a2e_yh1lfZNfaLrPpqAxMuTZAztDPvrMppD8trDkcJg=s160-c-k-c0x00ffffff-no-rj" alt="Аватар TheBrianMaps" class="w-24 h-24 rounded-full mx-auto mb-2 border-2 border-white/20 object-cover">
+                            <span class="font-semibold">TheBrianMaps</span>
+                        </a>
+                        <!-- KingSammelot -->
+                        <a href="https://www.youtube.com/@KingSammelot" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg youtuber-card">
+                            <img src="https://yt3.googleusercontent.com/ytc/AIdro_kTk7hhEG9ymIpHepn6uh6Y1L_oRXuM2pS9kuKjr2V_pXY=s160-c-k-c0x00ffffff-no-rj" alt="Аватар KingSammelot" class="w-24 h-24 rounded-full mx-auto mb-2 border-2 border-white/20 object-cover">
+                            <span class="font-semibold">KingSammelot</span>
+                        </a>
+                        <!-- sndk -->
+                        <a href="https://www.youtube.com/@sndk" target="_blank" rel="noopener noreferrer" class="p-3 rounded-lg youtuber-card">
+                            <img src="https://yt3.googleusercontent.com/MdBqPU-SBUgY22dhTqiv2R75Q7RKLMw_DLQ82mfAWCyQJLaf-S3ANQA2MxpooAEsoO5P4liM-g=s160-c-k-c0x00ffffff-no-rj" alt="Аватар sndk" class="w-24 h-24 rounded-full mx-auto mb-2 border-2 border-white/20 object-cover">
+                            <span class="font-semibold">sndk</span>
+                        </a>
+                    </div>
+                </section>
+                
+                <!-- Секция Favourite Music -->
+                <section class="lg:col-span-3 liquid-glass rounded-2xl p-6">
+                    <h2 class="text-2xl font-bold mb-4 border-b border-white/10 pb-2">Favourite Music</h2>
+                    <div class="text-center text-white/80">
+                        <p class="text-lg">
+                            Skrillex, Kanye West, TheFatRat, Oxxxymiron, Creo
+                        </p>
+                        <p class="mt-2 text-teal-300">
+                            And other EDM/Dubstep artists...
+                        </p>
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- Футер -->
+            <footer class="text-center mt-12 pb-8">
+                <p class="text-white/50 text-sm">
+                    &copy; 2025 leizark. Все права защищены.
+                </p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>
