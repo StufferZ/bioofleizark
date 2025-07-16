@@ -83,6 +83,7 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #6a6a8a;
         }
+        
     </style>
 </head>
 <body class="animated-gradient text-white min-h-screen antialiased">
@@ -105,6 +106,24 @@
 
             <!-- Основная сетка контента -->
             <main class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Секция My Covers -->
+                <section class="lg:col-span-3 liquid-glass rounded-2xl p-6">
+                    <h2 class="text-2xl font-bold mb-4 border-b border-white/10 pb-2">My Covers</h2>
+                    <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <div class="flex-1 text-center sm:text-left">
+                            <p class="font-bold text-lg">Eighto (Cover by Axed0bj & LeizarK)</p>
+                            <p class="text-sm text-white/70">by Jomekka</p>
+                            <p id="cover-duration" class="text-sm text-white/70 mt-1">Длительность: ...</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <audio id="cover-audio" controls src="https://github.com/StufferZ/bioofleizark/raw/refs/heads/main/8o%20(cover%20by%20axedobj+leizark).MP3" class="w-full sm:w-auto"></audio>
+                            <a href="https://github.com/StufferZ/bioofleizark/raw/refs/heads/main/8o%20(cover%20by%20axedobj+leizark).MP3" download="Eighto (Cover by Axed0bj & LeizarK).mp3" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Секция Social Networks -->
                 <section class="liquid-glass rounded-2xl p-6">
@@ -249,15 +268,30 @@
     <!-- Мини-плеер -->
     <div id="music-player" class="fixed bottom-4 right-4 liquid-glass rounded-2xl p-4 w-64 z-50 flex items-center space-x-4 hidden">
         <img id="player-cover" src="" alt="Обложка" class="w-16 h-16 rounded-lg object-cover">
-        <div class="flex-1">
+        <div class="flex-1 min-w-0">
             <p id="player-title" class="font-bold text-sm truncate">Your song is...</p>
-            <p id="player-artist" class="text-xs text-white/70"></p>
+            <p id="player-artist" class="text-xs text-white/70 truncate"></p>
             <p id="player-duration" class="text-xs text-white/70"></p>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // --- СКРИПТ ДЛЯ ПЛЕЕРА КАВЕРА ---
+            const coverAudio = document.getElementById('cover-audio');
+            const coverDurationEl = document.getElementById('cover-duration');
+
+            // Устанавливаем длительность, когда метаданные аудио загружены
+            coverAudio.onloadedmetadata = function() {
+                if (coverAudio.duration) {
+                    const duration = coverAudio.duration;
+                    const minutes = Math.floor(duration / 60);
+                    const seconds = Math.floor(duration % 60).toString().padStart(2, '0');
+                    coverDurationEl.textContent = `Длительность: ${minutes}:${seconds}`;
+                }
+            };
+            
+            // --- СКРИПТ ДЛЯ РАНДОМНОГО ПЛЕЕРА ---
             const songs = [
                 { artist: 'Creo', title: 'HYPERDEMENTED Dimension', duration: '3:12', cover: 'https://raw.githubusercontent.com/StufferZ/bioofleizark/refs/heads/main/CREO.png' },
                 { artist: 'Creo', title: 'Challenger', duration: '2:53', cover: 'https://raw.githubusercontent.com/StufferZ/bioofleizark/refs/heads/main/CREO.png' },
@@ -323,4 +357,4 @@
         });
     </script>
 </body>
-</html>
+</ht
